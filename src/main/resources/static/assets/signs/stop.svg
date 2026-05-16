@@ -1,0 +1,19 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    <polygon
+            points="50,8 110,8 152,50 152,110 110,152 50,152 8,110 8,50"
+            fill="#d71920"
+            stroke="white"
+            stroke-width="8"
+    />
+    <text
+            x="80"
+            y="93"
+            text-anchor="middle"
+            font-family="Arial, sans-serif"
+            font-size="36"
+            font-weight="700"
+            fill="white"
+    >
+        STOP
+    </text>
+</svg>

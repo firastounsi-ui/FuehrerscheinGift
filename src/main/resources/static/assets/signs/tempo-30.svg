@@ -1,0 +1,6 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="80" cy="80" r="62" fill="white" stroke="#d71920" stroke-width="12"/>
+    <text x="80" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="900" fill="#111">
+        30
+    </text>
+</svg>

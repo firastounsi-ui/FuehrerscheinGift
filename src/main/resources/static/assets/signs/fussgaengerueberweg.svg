@@ -1,0 +1,18 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    <rect x="18" y="18" width="124" height="124" rx="10" fill="#0057b8"/>
+
+    <!-- white triangle -->
+    <polygon points="80,32 128,126 32,126" fill="white"/>
+
+    <!-- zebra stripes -->
+    <rect x="50" y="106" width="12" height="26" fill="#111"/>
+    <rect x="72" y="106" width="12" height="26" fill="#111"/>
+    <rect x="94" y="106" width="12" height="26" fill="#111"/>
+
+    <!-- pedestrian -->
+    <circle cx="80" cy="62" r="7" fill="#111"/>
+    <line x1="80" y1="70" x2="75" y2="92" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+    <line x1="77" y1="78" x2="62" y2="86" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+    <line x1="76" y1="92" x2="64" y2="111" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+    <line x1="76" y1="92" x2="94" y2="111" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+</svg>

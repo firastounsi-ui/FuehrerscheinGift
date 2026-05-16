@@ -1,0 +1,7 @@
+<svg width="220" height="120" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="20" width="200" height="80" rx="8" fill="#0057b8"/>
+
+    <!-- white arrow -->
+    <path d="M35 60 H145" stroke="white" stroke-width="22" stroke-linecap="round"/>
+    <path d="M135 30 L185 60 L135 90 Z" fill="white"/>
+</svg>

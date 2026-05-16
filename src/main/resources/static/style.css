@@ -191,6 +191,129 @@ main {
     margin: 0 0 12px;
 }
 
+/* Course section */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.course-tab {
+    background: #f8fafc;
+    color: #172033;
+    border: 1px solid #dbeafe;
+    border-radius: 20px;
+    padding: 18px;
+    text-align: right;
+    box-shadow: none;
+}
+
+.course-tab span {
+    display: block;
+    font-size: 28px;
+}
+
+.course-tab strong {
+    display: block;
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+.course-tab small {
+    display: block;
+    direction: ltr;
+    color: #2563eb;
+    font-weight: 800;
+}
+
+.course-tab:hover {
+    background: #eff6ff;
+    transform: translateY(-3px);
+}
+
+.lesson-view {
+    background: #f8fafc;
+    border-radius: 24px;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+}
+
+.lesson-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.lesson-icon {
+    width: 70px;
+    height: 70px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    font-size: 34px;
+}
+
+.lesson-header p {
+    direction: ltr;
+    text-align: right;
+    color: #2563eb;
+    font-weight: 900;
+    margin: 0;
+}
+
+.lesson-header h3 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.lesson-intro {
+    font-size: 19px;
+    color: #334155;
+}
+
+.lesson-points {
+    display: grid;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.lesson-points li {
+    background: white;
+    border-right: 5px solid #2563eb;
+    padding: 14px 16px;
+    border-radius: 14px;
+}
+
+.lesson-tip {
+    margin-top: 18px;
+    background: #fef3c7;
+    border-right: 6px solid #f59e0b;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.lesson-tip strong {
+    color: #92400e;
+}
+
+/* Filter */
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 26px;
+}
+
+.filter-bar button {
+    background: #111827;
+}
+
 /* Sign base */
 .sign {
     width: 96px;
@@ -264,7 +387,7 @@ main {
     );
 }
 
-/* Priority road */
+/* Priority */
 .priority-sign {
     background: #facc15;
     transform: rotate(45deg);
@@ -291,6 +414,24 @@ main {
     height: 92px;
     background: #dc2626;
     transform: rotate(-45deg);
+    border-radius: 999px;
+}
+
+/* No entry */
+.no-entry-sign {
+    position: relative;
+    background: #dc2626;
+    border-radius: 50%;
+    border: 8px solid white;
+    outline: 3px solid #dc2626;
+}
+
+.no-entry-sign::after {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 14px;
+    background: white;
     border-radius: 999px;
 }
 
@@ -332,48 +473,23 @@ main {
     z-index: 2;
 }
 
-/* Rules */
-.split {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 28px;
-    align-items: start;
-}
-
-.rule {
-    background: #f8fafc;
-    border-right: 6px solid #2563eb;
-    padding: 18px;
-    border-radius: 18px;
-    margin-bottom: 14px;
-}
-
-.rule strong {
-    display: block;
-    direction: ltr;
-    text-align: right;
-    color: #1d4ed8;
-    font-size: 20px;
-}
-
-.formula-panel {
-    background: #0f172a;
+.crosswalk-sign {
+    background: #2563eb;
     color: white;
-    padding: 26px;
-    border-radius: 24px;
+    border-radius: 14px;
+    font-size: 38px;
 }
 
-.formula {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 16px;
-    border-radius: 16px;
-    margin-bottom: 14px;
+.action-box {
+    background: #eff6ff;
+    border-radius: 14px;
+    padding: 12px;
+    margin-top: 14px;
 }
 
-.formula b {
+.action-box strong {
     display: block;
-    color: #93c5fd;
-    direction: ltr;
+    color: #1d4ed8;
 }
 
 /* Quiz */
@@ -434,7 +550,7 @@ footer {
 
 @media (max-width: 900px) {
     .cards,
-    .split {
+    .course-list {
         grid-template-columns: 1fr;
     }
 
@@ -447,4 +563,184 @@ footer {
         margin-top: 60px;
         padding: 30px;
     }
+
+    .active-course {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+    }}
+
+    .active-course small {
+        color: #dbeafe;
+    }
+
+    .chapter-list {
+        display: grid;
+        gap: 18px;
+        margin-top: 24px;
+    }
+
+    .chapter {
+        background: white;
+        border-radius: 18px;
+        padding: 20px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .chapter h4 {
+        margin: 0 0 12px;
+        color: #1d4ed8;
+        font-size: 21px;
+    }
+
+    .chapter ul,
+    .trap-box ul {
+        margin: 0;
+        padding-right: 22px;
+    }
+
+    .chapter li,
+    .trap-box li {
+        margin-bottom: 8px;
+    }
+
+    .trap-box {
+        margin-top: 22px;
+        background: #fff1f2;
+        border-right: 6px solid #e11d48;
+        border-radius: 18px;
+        padding: 20px;
+    }
+
+    .trap-box h4 {
+        margin: 0 0 12px;
+        color: #be123c;
+        font-size: 21px;
+    }
+.sign-tools {
+    margin-bottom: 26px;
+}
+
+#sign-search {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 0 auto 18px;
+    padding: 16px 20px;
+    border-radius: 999px;
+    border: 2px solid #dbeafe;
+    font-size: 17px;
+    text-align: right;
+    outline: none;
+}
+
+#sign-search:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.sign-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-box {
+    margin-top: 16px;
+    background: #fff7ed;
+    border-radius: 14px;
+    padding: 12px;
+    text-align: right;
+}
+
+.details-box summary {
+    cursor: pointer;
+    font-weight: 900;
+    color: #c2410c;
+}
+
+.details-box p {
+    margin: 6px 0 12px;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    background: #fff7ed;
+    color: #9a3412;
+    padding: 26px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 900;
+}
+
+/* Extra sign styles */
+.priority-end-sign {
+    position: relative;
+    background: #facc15;
+    transform: rotate(45deg);
+    border: 8px solid white;
+    outline: 3px solid #111827;
+    width: 78px;
+    height: 78px;
+    margin-top: 10px;
+    margin-bottom: 26px;
+}
+
+.priority-end-sign::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 8px;
+    background: #111827;
+    top: 35px;
+    left: -28px;
+    transform: rotate(90deg);
+}
+
+.no-stop-sign {
+    position: relative;
+    background: #2563eb;
+    border: 8px solid #dc2626;
+    border-radius: 50%;
+}
+
+.no-stop-sign::before,
+.no-stop-sign::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 92px;
+    background: #dc2626;
+    border-radius: 999px;
+}
+
+.no-stop-sign::before {
+    transform: rotate(-45deg);
+}
+
+.no-stop-sign::after {
+    transform: rotate(45deg);
+}
+
+.speed-30-sign {
+    background: white;
+    color: #111827;
+    border: 8px solid #dc2626;
+    border-radius: 50%;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.one-way-sign {
+    background: #2563eb;
+    color: white;
+    border-radius: 14px;
+    font-size: 44px;
+    font-weight: 900;
+}
+.real-sign {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 18px;
 }

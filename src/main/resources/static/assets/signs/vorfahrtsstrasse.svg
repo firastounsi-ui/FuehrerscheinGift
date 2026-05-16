@@ -1,0 +1,20 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    <rect
+            x="39"
+            y="39"
+            width="82"
+            height="82"
+            transform="rotate(45 80 80)"
+            fill="white"
+            stroke="#222"
+            stroke-width="3"
+    />
+    <rect
+            x="52"
+            y="52"
+            width="56"
+            height="56"
+            transform="rotate(45 80 80)"
+            fill="#f4c430"
+    />
+</svg>

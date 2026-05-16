@@ -3,153 +3,85 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Führerschein Gift</title>
+
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
 <header class="hero">
     <nav class="nav">
         <div class="logo">🚗 Führerschein Gift</div>
+
         <div class="nav-links">
+            <a href="#courses">الدروس</a>
             <a href="#signs">الإشارات</a>
-            <a href="#rules">القواعد</a>
             <a href="#quiz">Quiz</a>
         </div>
     </nav>
 
     <section class="hero-content">
-        <p class="badge">هدية صغيرة للمذاكرة</p>
-        <h1>تعلمي امتحان القيادة الألماني بسهولة</h1>
+        <p class="badge">Theoretische Prüfung</p>
+
+        <h1>تعلمي امتحان القيادة الألماني بطريقة سهلة</h1>
+
         <p class="subtitle">
-            إشارات، أولوية، سرعة، أوتوبان، وأسئلة خادعة بطريقة بسيطة بالعربية والألمانية.
+            موقع شخصي للمذاكرة: دروس حقيقية، إشارات، قواعد، أسئلة خادعة،
+            وشرح عربي مع المصطلحات الألمانية المهمة.
         </p>
 
         <div class="hero-actions">
-            <a class="primary-btn" href="#signs">ابدئي التعلم</a>
-            <a class="secondary-btn" href="#quiz">جربي Quiz</a>
+            <a class="primary-btn" href="#courses">ابدئي الدروس</a>
+            <a class="secondary-btn" href="#quiz">اختبار سريع</a>
         </div>
     </section>
 </header>
 
 <main>
-
     <section class="love-note">
         <h2>رسالة صغيرة لكِ</h2>
         <p>
-            صنعت لكِ هذا الموقع حتى تكون المذاكرة أخف وأسهل.
-            امتحان القيادة الألماني مزعج، لكنكِ أذكى من أسئلته الخادعة الصغيرة.
+            صنعت لكِ هذا الموقع حتى تصبح المذاكرة أسهل وأقل مللًا.
+            امتحان القيادة الألماني يحب التفاصيل الصغيرة، لكنكِ قادرة عليه.
         </p>
+    </section>
+
+    <section id="courses" class="section">
+        <div class="section-title">
+            <p>Kurse</p>
+            <h2>الدروس الأساسية</h2>
+        </div>
+
+        <div id="course-list" class="course-list"></div>
+
+        <article id="lesson-view" class="lesson-view"></article>
     </section>
 
     <section id="signs" class="section">
         <div class="section-title">
             <p>Verkehrszeichen</p>
-            <h2>أهم الإشارات</h2>
+            <h2>إشارات مهمة</h2>
         </div>
+        <div class="sign-tools">
+            <input
+                    id="sign-search"
+                    type="text"
+                    placeholder="ابحثي عن إشارة: STOP, Vorfahrt, Autobahn..."
+                    oninput="handleSignSearch(this.value)"
+            />
 
-        <div class="cards">
-
-            <article class="card">
-                <div class="sign danger-sign">
-                    <span>!</span>
-                </div>
-                <h3>إشارات الخطر</h3>
-                <p class="de">Gefahrenzeichen</p>
-                <p>
-                    تحذر من خطر قادم مثل المنعطفات، الأطفال، الحيوانات، أو الطريق الزلق.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="sign yield-sign"></div>
-                <h3>أعطِ الأولوية</h3>
-                <p class="de">Vorfahrt gewähren</p>
-                <p>
-                    خففي السرعة، راقبي الطريق، وتوقفي فقط إذا كان هناك مرور له أولوية.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="sign stop-sign">STOP</div>
-                <h3>قف</h3>
-                <p class="de">Halt! Vorfahrt gewähren</p>
-                <p>
-                    يجب التوقف الكامل دائمًا. ليس تباطؤًا لطيفًا كما يحب بعض البشر التظاهر.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="sign priority-sign"></div>
-                <h3>طريق ذو أولوية</h3>
-                <p class="de">Vorfahrtsstraße</p>
-                <p>
-                    أنتِ على طريق له أولوية، لكن الانتباه يبقى واجبًا.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="sign no-parking-sign"></div>
-                <h3>ممنوع الوقوف</h3>
-                <p class="de">Eingeschränktes Halteverbot</p>
-                <p>
-                    يسمح بالتوقف القصير، لكن لا يسمح بالركن أو الانتظار الطويل.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="sign autobahn-sign">
-                    <span></span>
-                </div>
-                <h3>الأوتوبان</h3>
-                <p class="de">Autobahn</p>
-                <p>
-                    دخول بسرعة مناسبة، تجاوز من اليسار، ومسافة أمان أكبر.
-                </p>
-            </article>
-
-        </div>
-    </section>
-
-    <section id="rules" class="section split">
-        <div>
-            <p class="section-kicker">Wichtige Regeln</p>
-            <h2>قواعد تحفظك من الفخاخ</h2>
-
-            <div class="rule">
-                <strong>Rechts vor Links</strong>
-                <span>إذا لا توجد إشارات، الأولوية للقادم من اليمين.</span>
-            </div>
-
-            <div class="rule">
-                <strong>STOP</strong>
-                <span>العجلات يجب أن تتوقف تمامًا. الامتحان لا يقبل الشعر الرمادي بين التوقف والحركة.</span>
-            </div>
-
-            <div class="rule">
-                <strong>Rettungsgasse</strong>
-                <span>عند الازدحام على الأوتوبان، افتحي ممر الطوارئ فورًا.</span>
+            <div class="filter-bar">
+                <button onclick="setSignFilter('all')">الكل</button>
+                <button onclick="setSignFilter('danger')">خطر</button>
+                <button onclick="setSignFilter('priority')">أولوية</button>
+                <button onclick="setSignFilter('ban')">منع</button>
+                <button onclick="setSignFilter('info')">إرشاد</button>
             </div>
         </div>
 
-        <div class="formula-panel">
-            <h3>معادلات مهمة</h3>
+        <div id="sign-list" class="cards"></div>
 
-            <div class="formula">
-                <b>Reaktionsweg</b>
-                <span>السرعة ÷ 10 × 3</span>
-            </div>
-
-            <div class="formula">
-                <b>Bremsweg</b>
-                <span>(السرعة ÷ 10)²</span>
-            </div>
-
-            <div class="formula">
-                <b>Anhalteweg</b>
-                <span>Reaktionsweg + Bremsweg</span>
-            </div>
-        </div>
     </section>
 
     <section id="quiz" class="section quiz-section">
@@ -171,11 +103,10 @@
             </button>
         </div>
     </section>
-
 </main>
 
 <footer>
-    <p>Made with love, Arabic explanations, and German traffic rules. A dangerous mix.</p>
+    <p>Made with love, Arabic explanations, and German traffic rules. A cursed but useful combination.</p>
 </footer>
 
 <script src="script.js"></script>

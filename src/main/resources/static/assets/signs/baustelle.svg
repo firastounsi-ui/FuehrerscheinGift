@@ -1,0 +1,80 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+    <!-- Triangle rouge extérieur -->
+    <polygon points="80,8 153,142 7,142" fill="#e30613"/>
+
+    <!-- Triangle blanc intérieur -->
+    <polygon points="80,28 132,130 28,130" fill="white"/>
+
+    <!-- Ouvrier : tête -->
+    <circle cx="91" cy="58" r="8" fill="#111"/>
+
+    <!-- Corps penché -->
+    <path
+            d="M72 67
+       L94 67
+       L101 85
+       L88 88
+       L80 77
+       L68 93
+       L56 86
+       Z"
+            fill="#111"
+    />
+
+    <!-- Bras arrière -->
+    <path
+            d="M70 75 L53 94"
+            stroke="#111"
+            stroke-width="8"
+            stroke-linecap="round"
+    />
+
+    <!-- Bras vers la pelle -->
+    <path
+            d="M94 80 L104 101"
+            stroke="#111"
+            stroke-width="7"
+            stroke-linecap="round"
+    />
+
+    <!-- Jambe arrière -->
+    <path
+            d="M74 90 L58 119"
+            stroke="#111"
+            stroke-width="11"
+            stroke-linecap="round"
+    />
+
+    <!-- Jambe avant -->
+    <path
+            d="M85 89 L90 119"
+            stroke="#111"
+            stroke-width="11"
+            stroke-linecap="round"
+    />
+
+    <!-- Manche de la pelle -->
+    <path
+            d="M110 57 L100 126"
+            stroke="#111"
+            stroke-width="5"
+            stroke-linecap="round"
+    />
+
+    <!-- Pelle -->
+    <path
+            d="M94 127 L108 129 L100 143 Z"
+            fill="#111"
+    />
+
+    <!-- Tas de terre -->
+    <path
+            d="M101 119
+       C109 105, 125 101, 135 113
+       C141 119, 145 126, 148 132
+       L96 132
+       C96 127, 98 123, 101 119
+       Z"
+            fill="#111"
+    />
+</svg>
