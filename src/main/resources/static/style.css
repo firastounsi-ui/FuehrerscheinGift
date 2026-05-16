@@ -744,3 +744,20 @@ footer {
     display: block;
     margin: 0 auto 18px;
 }
+.daily-quiz-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #eff6ff;
+    border-radius: 999px;
+    padding: 10px 18px;
+    margin-bottom: 20px;
+    color: #1d4ed8;
+    font-weight: 900;
+}
+
+.daily-quiz-info strong {
+    direction: ltr;
+    font-weight: 900;
+}

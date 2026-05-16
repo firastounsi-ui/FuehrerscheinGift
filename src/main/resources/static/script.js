@@ -463,59 +463,35 @@ const signs = [
     }
 ];
 
-const quiz = [
-    {
-        question: "من يملك الأولوية إذا لا توجد إشارات؟",
-        answers: [
-            { text: "السيارة الأسرع", correct: false },
-            { text: "السيارة القادمة من اليمين", correct: true },
-            { text: "السيارة الأكبر", correct: false }
-        ],
-        explanation: "صحيح. في غياب الإشارات تطبق قاعدة Rechts vor Links."
-    },
-    {
-        question: "ماذا يجب أن تفعلي عند إشارة STOP؟",
-        answers: [
-            { text: "تخفيف السرعة فقط", correct: false },
-            { text: "التوقف الكامل", correct: true },
-            { text: "المرور إذا كان الطريق فارغًا", correct: false }
-        ],
-        explanation: "STOP يعني توقف كامل دائمًا."
-    },
-    {
-        question: "ما هو Reaktionsweg عند سرعة 50 km/h؟",
-        answers: [
-            { text: "5 متر", correct: false },
-            { text: "15 متر", correct: true },
-            { text: "25 متر", correct: false }
-        ],
-        explanation: "الحساب: 50 ÷ 10 × 3 = 15 متر."
-    },
-    {
-        question: "متى يجب إنشاء Rettungsgasse؟",
-        answers: [
-            { text: "عند سماع الإسعاف فقط", correct: false },
-            { text: "فور بداية الازدحام", correct: true },
-            { text: "بعد توقف السيارات تمامًا", correct: false }
-        ],
-        explanation: "Rettungsgasse يجب أن تبدأ فور ظهور الازدحام."
-    },
-    {
-        question: "ماذا تفعلين عند Aquaplaning؟",
-        answers: [
-            { text: "فرملة قوية", correct: false },
-            { text: "رفع القدم عن البنزين وتثبيت المقود", correct: true },
-            { text: "تغيير الاتجاه بسرعة", correct: false }
-        ],
-        explanation: "عند Aquaplaning تجنبي الحركات المفاجئة."
-    }
-];
+let quiz = [];
 
 let currentQuestion = 0;
 let answered = false;
 let currentSignFilter = "all";
 let currentSignSearch = "";
+async function loadDailyQuiz() {
+    try {
+        const response = await fetch("/api/daily-quiz");
 
+        if (!response.ok) {
+            throw new Error("Failed to load daily quiz");
+        }
+
+        quiz = await response.json();
+
+        currentQuestion = 0;
+        answered = false;
+
+        loadQuestion();
+    } catch (error) {
+        console.error(error);
+
+        questionText.textContent = "حدث خطأ أثناء تحميل الأسئلة.";
+        answersContainer.innerHTML = "";
+        feedback.textContent = "تأكدي أن السيرفر يعمل وأن /api/daily-quiz يرجع الأسئلة.";
+        feedback.style.color = "#dc2626";
+    }
+}
 function renderCourses() {
     const courseList = document.getElementById("course-list");
 
@@ -658,7 +634,16 @@ const questionText = document.getElementById("quiz-question");
 const answersContainer = document.getElementById("answers");
 const feedback = document.getElementById("feedback");
 const nextBtn = document.getElementById("next-btn");
+const dailyDate = document.getElementById("daily-date");
+function renderDailyDate() {
+    const today = new Date();
 
+    dailyDate.textContent = today.toLocaleDateString("de-DE", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+    });
+}
 function loadQuestion() {
     answered = false;
     feedback.textContent = "";
@@ -719,4 +704,5 @@ function nextQuestion() {
 
 renderCourses();
 renderSigns();
-loadQuestion();
+renderDailyDate();
+loadDailyQuiz();

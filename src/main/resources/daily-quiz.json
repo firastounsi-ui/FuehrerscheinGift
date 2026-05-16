@@ -1,0 +1,200 @@
+[
+  {
+    "question": "من يملك الأولوية إذا لا توجد إشارات؟",
+    "answers": [
+      { "text": "السيارة الأسرع", "correct": false },
+      { "text": "السيارة القادمة من اليمين", "correct": true },
+      { "text": "السيارة الأكبر", "correct": false }
+    ],
+    "explanation": "في غياب الإشارات تطبق قاعدة Rechts vor Links، يعني الأولوية للقادم من اليمين."
+  },
+  {
+    "question": "ماذا يجب أن تفعلي عند إشارة STOP؟",
+    "answers": [
+      { "text": "تخفيف السرعة فقط", "correct": false },
+      { "text": "التوقف الكامل", "correct": true },
+      { "text": "المرور إذا كان الطريق فارغًا", "correct": false }
+    ],
+    "explanation": "STOP يعني توقف كامل دائمًا، حتى لو بدا الطريق فارغًا."
+  },
+  {
+    "question": "ماذا تعني Vorfahrt gewähren؟",
+    "answers": [
+      { "text": "يجب إعطاء الأولوية", "correct": true },
+      { "text": "يجب التوقف دائمًا", "correct": false },
+      { "text": "الطريق مغلق", "correct": false }
+    ],
+    "explanation": "Vorfahrt gewähren تعني إعطاء الأولوية، وليس التوقف دائمًا إذا كان الطريق فارغًا."
+  },
+  {
+    "question": "ما هو Reaktionsweg عند سرعة 50 km/h؟",
+    "answers": [
+      { "text": "5 متر", "correct": false },
+      { "text": "15 متر", "correct": true },
+      { "text": "25 متر", "correct": false }
+    ],
+    "explanation": "الحساب: 50 ÷ 10 × 3 = 15 متر."
+  },
+  {
+    "question": "ما هو Bremsweg العادي عند سرعة 50 km/h؟",
+    "answers": [
+      { "text": "25 متر", "correct": true },
+      { "text": "15 متر", "correct": false },
+      { "text": "50 متر", "correct": false }
+    ],
+    "explanation": "Bremsweg = (السرعة ÷ 10)²، إذن 5² = 25 متر."
+  },
+  {
+    "question": "ما هو Anhalteweg؟",
+    "answers": [
+      { "text": "مسافة الفرملة فقط", "correct": false },
+      { "text": "مسافة رد الفعل + مسافة الفرملة", "correct": true },
+      { "text": "مسافة الأمان فقط", "correct": false }
+    ],
+    "explanation": "Anhalteweg = Reaktionsweg + Bremsweg."
+  },
+  {
+    "question": "متى يجب إنشاء Rettungsgasse؟",
+    "answers": [
+      { "text": "عند سماع الإسعاف فقط", "correct": false },
+      { "text": "فور بداية الازدحام", "correct": true },
+      { "text": "بعد توقف السيارات تمامًا", "correct": false }
+    ],
+    "explanation": "يجب إنشاء Rettungsgasse فور بداية الازدحام، وليس عند وصول الإسعاف فقط."
+  },
+  {
+    "question": "كيف يتم التجاوز على الأوتوبان؟",
+    "answers": [
+      { "text": "من اليمين", "correct": false },
+      { "text": "من اليسار", "correct": true },
+      { "text": "من أي جهة إذا كانت السرعة عالية", "correct": false }
+    ],
+    "explanation": "في ألمانيا التجاوز يكون من اليسار، خصوصًا على الأوتوبان."
+  },
+  {
+    "question": "من يملك الأولوية عند الدخول إلى الأوتوبان؟",
+    "answers": [
+      { "text": "السيارة التي تدخل", "correct": false },
+      { "text": "السيارات الموجودة على الأوتوبان", "correct": true },
+      { "text": "الأبطأ دائمًا", "correct": false }
+    ],
+    "explanation": "السيارات الموجودة على الأوتوبان لها الأولوية. يجب الاندماج بحذر."
+  },
+  {
+    "question": "ماذا تفعلين عند Aquaplaning؟",
+    "answers": [
+      { "text": "فرملة قوية", "correct": false },
+      { "text": "رفع القدم عن البنزين وتثبيت المقود", "correct": true },
+      { "text": "تغيير الاتجاه بسرعة", "correct": false }
+    ],
+    "explanation": "عند Aquaplaning يجب تجنب الحركات المفاجئة ورفع القدم عن البنزين بهدوء."
+  },
+  {
+    "question": "متى تستخدمين Nebelschlussleuchte؟",
+    "answers": [
+      { "text": "عندما تكون الرؤية أقل من 50 مترًا", "correct": true },
+      { "text": "دائمًا في الليل", "correct": false },
+      { "text": "عند المطر الخفيف فقط", "correct": false }
+    ],
+    "explanation": "Nebelschlussleuchte تستخدم فقط عندما تكون الرؤية أقل من 50 مترًا."
+  },
+  {
+    "question": "ما الخطر عند رؤية أطفال قرب الطريق؟",
+    "answers": [
+      { "text": "الأطفال قد يتحركون بشكل غير متوقع", "correct": true },
+      { "text": "السيارات ممنوعة دائمًا", "correct": false },
+      { "text": "يجب استخدام الضوء العالي", "correct": false }
+    ],
+    "explanation": "الأطفال قد يركضون فجأة إلى الطريق، خصوصًا قرب المدارس أو الملاعب."
+  },
+  {
+    "question": "إذا ظهرت كرة على الطريق، ماذا تتوقعين؟",
+    "answers": [
+      { "text": "طفل قد يركض خلفها", "correct": true },
+      { "text": "الطريق مغلق", "correct": false },
+      { "text": "لا يوجد خطر", "correct": false }
+    ],
+    "explanation": "كرة على الطريق قد تعني أن طفلًا سيلحق بها فجأة."
+  },
+  {
+    "question": "ما أكبر خطر عند الانعطاف يمينًا داخل المدينة؟",
+    "answers": [
+      { "text": "الدراجات في الزاوية العمياء", "correct": true },
+      { "text": "السيارات خلفك فقط", "correct": false },
+      { "text": "لوحة السرعة فقط", "correct": false }
+    ],
+    "explanation": "عند الانعطاف يجب فحص المرآة والكتف والانتباه للدراجات والمشاة."
+  },
+  {
+    "question": "أين يكون خطر Glatteis أكبر غالبًا؟",
+    "answers": [
+      { "text": "على الجسور والمناطق المظللة", "correct": true },
+      { "text": "داخل مواقف السيارات فقط", "correct": false },
+      { "text": "في الصيف فقط", "correct": false }
+    ],
+    "explanation": "الجسور والمناطق المظللة تبرد أسرع، لذلك يظهر الجليد هناك غالبًا أولًا."
+  },
+  {
+    "question": "ماذا تفعلين عند الطريق الزلق؟",
+    "answers": [
+      { "text": "تخفيف السرعة وزيادة المسافة", "correct": true },
+      { "text": "الفرملة بقوة", "correct": false },
+      { "text": "زيادة السرعة للخروج بسرعة", "correct": false }
+    ],
+    "explanation": "في الطريق الزلق يجب تخفيف السرعة، القيادة بهدوء، وزيادة Abstand."
+  },
+  {
+    "question": "هل السرعة المسموحة دائمًا آمنة؟",
+    "answers": [
+      { "text": "نعم دائمًا", "correct": false },
+      { "text": "لا، يجب مراعاة الطقس والرؤية والطريق", "correct": true },
+      { "text": "نعم إذا كنتِ على الأوتوبان", "correct": false }
+    ],
+    "explanation": "الحد الأقصى ليس دائمًا السرعة الآمنة. الظروف قد تتطلب سرعة أقل."
+  },
+  {
+    "question": "ماذا يعني Absolutes Halteverbot؟",
+    "answers": [
+      { "text": "ممنوع التوقف تمامًا", "correct": true },
+      { "text": "ممنوع الركن فقط", "correct": false },
+      { "text": "مسموح التوقف لدقيقة", "correct": false }
+    ],
+    "explanation": "Absolutes Halteverbot يعني ممنوع التوقف، حتى لفترة قصيرة."
+  },
+  {
+    "question": "ماذا يعني Eingeschränktes Halteverbot؟",
+    "answers": [
+      { "text": "ممنوع التوقف تمامًا", "correct": false },
+      { "text": "ممنوع الركن، لكن التوقف القصير ممكن", "correct": true },
+      { "text": "طريق مغلق", "correct": false }
+    ],
+    "explanation": "Eingeschränktes Halteverbot يمنع الركن، لكنه قد يسمح بتوقف قصير."
+  },
+  {
+    "question": "متى يعتبر التوقف Parken غالبًا؟",
+    "answers": [
+      { "text": "إذا تجاوز 3 دقائق أو غادرتِ السيارة", "correct": true },
+      { "text": "بعد 10 ثوانٍ دائمًا", "correct": false },
+      { "text": "فقط في الليل", "correct": false }
+    ],
+    "explanation": "Parken يعني غالبًا التوقف أكثر من 3 دقائق أو مغادرة السيارة."
+  },
+  {
+    "question": "ماذا تفعلين عند تعب شديد أثناء القيادة؟",
+    "answers": [
+      { "text": "تكملين لأن المنزل قريب", "correct": false },
+      { "text": "تتوقفين وتأخذين راحة", "correct": true },
+      { "text": "تفتحين النافذة فقط", "correct": false }
+    ],
+    "explanation": "التعب يبطئ رد الفعل ويزيد خطر الحوادث. الحل الحقيقي هو الراحة."
+  },
+  {
+    "question": "ما نسبة الكحول المسموحة للسائقين الجدد؟",
+    "answers": [
+      { "text": "0.0‰", "correct": true },
+      { "text": "0.5‰", "correct": false },
+      { "text": "1.0‰", "correct": false }
+    ],
+    "explanation": "للسائقين الجدد في فترة Probezeit القاعدة هي 0.0‰."
+  }
+]
