@@ -761,3 +761,13 @@ footer {
     direction: ltr;
     font-weight: 900;
 }
+.daily-status {
+    background: #ecfdf5;
+    color: #047857;
+    border-right: 6px solid #10b981;
+    border-radius: 18px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    font-weight: 900;
+    text-align: right;
+}

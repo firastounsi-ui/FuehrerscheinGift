@@ -469,6 +469,50 @@ let currentQuestion = 0;
 let answered = false;
 let currentSignFilter = "all";
 let currentSignSearch = "";
+let score = 0;
+function getTodayKey() {
+    const today = new Date();
+
+    const date = today.toLocaleDateString("sv-SE", {
+        timeZone: "Europe/Berlin"
+    });
+
+    return `dailyQuizResult-${date}`;
+}
+
+function saveDailyResult() {
+    const result = {
+        date: new Date().toLocaleDateString("sv-SE", {
+            timeZone: "Europe/Berlin"
+        }),
+        score: score,
+        total: quiz.length
+    };
+
+    localStorage.setItem(getTodayKey(), JSON.stringify(result));
+}
+
+function getDailyResult() {
+    const saved = localStorage.getItem(getTodayKey());
+
+    if (!saved) {
+        return null;
+    }
+
+    return JSON.parse(saved);
+}
+
+function renderSavedDailyResult() {
+    const result = getDailyResult();
+
+    if (!result) {
+        dailyStatus.classList.add("hidden");
+        return;
+    }
+
+    dailyStatus.textContent = `Quiz du jour terminé ✅ Score: ${result.score}/${result.total}. Reviens demain pour 10 nouvelles questions.`;
+    dailyStatus.classList.remove("hidden");
+}
 async function loadDailyQuiz() {
     try {
         const response = await fetch("/api/daily-quiz");
@@ -478,9 +522,11 @@ async function loadDailyQuiz() {
         }
 
         quiz = await response.json();
+        renderSavedDailyResult();
 
         currentQuestion = 0;
         answered = false;
+        score =0;
 
         loadQuestion();
     } catch (error) {
@@ -635,6 +681,7 @@ const answersContainer = document.getElementById("answers");
 const feedback = document.getElementById("feedback");
 const nextBtn = document.getElementById("next-btn");
 const dailyDate = document.getElementById("daily-date");
+const dailyStatus = document.getElementById("daily-status");
 function renderDailyDate() {
     const today = new Date();
 
@@ -675,11 +722,13 @@ function selectAnswer(button, isCorrect, explanation) {
         const answer = quiz[currentQuestion].answers.find(a => a.text === btn.textContent);
 
         if (answer.correct) {
+
             btn.classList.add("correct");
         }
     });
 
     if (isCorrect) {
+        score ++;
         button.classList.add("correct");
         feedback.textContent = explanation;
         feedback.style.color = "#16a34a";
@@ -696,7 +745,17 @@ function nextQuestion() {
     currentQuestion++;
 
     if (currentQuestion >= quiz.length) {
-        currentQuestion = 0;
+        saveDailyResult();
+        renderSavedDailyResult();
+
+        questionCounter.textContent = "Quiz terminé";
+        questionText.textContent = "Bravo, tu as terminé le quiz du jour ✅";
+        answersContainer.innerHTML = "";
+        feedback.textContent = "Reviens demain pour 10 nouvelles questions.";
+        feedback.style.color = "#047857";
+        nextBtn.classList.add("hidden");
+
+        return;
     }
 
     loadQuestion();
