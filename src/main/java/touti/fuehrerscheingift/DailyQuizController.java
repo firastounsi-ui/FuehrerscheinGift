@@ -18,6 +18,17 @@ import java.util.Random;
 public class DailyQuizController {
 
     private static final ZoneId GERMANY_ZONE = ZoneId.of("Europe/Berlin");
+    private static final int DAILY_QUESTION_COUNT = 10;
+
+    private static final List<CategoryQuota> DAILY_MIX = List.of(
+            new CategoryQuota("priority", 2),
+            new CategoryQuota("signs", 2),
+            new CategoryQuota("speed", 2),
+            new CategoryQuota("autobahn", 1),
+            new CategoryQuota("weather", 1),
+            new CategoryQuota("pedestrians", 1),
+            new CategoryQuota("parking", 1)
+    );
 
     private final JsonMapper objectMapper;
 
@@ -27,14 +38,60 @@ public class DailyQuizController {
 
     @GetMapping("/api/daily-quiz")
     public List<QuizQuestion> getDailyQuiz() {
-        List<QuizQuestion> questions = new ArrayList<>(loadQuestionPool());
+        List<QuizQuestion> pool = loadQuestionPool();
 
         long todaySeed = LocalDate.now(GERMANY_ZONE).toEpochDay();
 
-        Collections.shuffle(questions, new Random(todaySeed));
+        List<QuizQuestion> selected = new ArrayList<>();
 
-        return questions.stream()
-                .limit(10)
+        for (CategoryQuota quota : DAILY_MIX) {
+            selected.addAll(
+                    pickFromCategory(pool, quota.category(), quota.count(), todaySeed)
+            );
+        }
+
+        List<QuizQuestion> remaining = new ArrayList<>(
+                pool.stream()
+                        .filter(question -> !selected.contains(question))
+                        .toList()
+        );
+
+        Collections.shuffle(remaining, new Random(todaySeed + 999));
+
+        for (QuizQuestion question : remaining) {
+            if (selected.size() >= DAILY_QUESTION_COUNT) {
+                break;
+            }
+
+            selected.add(question);
+        }
+
+        Collections.shuffle(selected, new Random(todaySeed * 31 + 7));
+
+        return selected.stream()
+                .limit(DAILY_QUESTION_COUNT)
+                .toList();
+    }
+
+    private List<QuizQuestion> pickFromCategory(
+            List<QuizQuestion> pool,
+            String category,
+            int count,
+            long seed
+    ) {
+        List<QuizQuestion> categoryQuestions = new ArrayList<>(
+                pool.stream()
+                        .filter(question -> category.equals(question.category()))
+                        .toList()
+        );
+
+        Collections.shuffle(
+                categoryQuestions,
+                new Random(seed + category.hashCode())
+        );
+
+        return categoryQuestions.stream()
+                .limit(count)
                 .toList();
     }
 
@@ -54,6 +111,8 @@ public class DailyQuizController {
     }
 
     public record QuizQuestion(
+            String category,
+            String difficulty,
             String question,
             List<QuizAnswer> answers,
             String explanation
@@ -62,5 +121,10 @@ public class DailyQuizController {
     public record QuizAnswer(
             String text,
             boolean correct
+    ) {}
+
+    private record CategoryQuota(
+            String category,
+            int count
     ) {}
 }

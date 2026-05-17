@@ -1,200 +1,592 @@
 [
   {
-    "question": "من يملك الأولوية إذا لا توجد إشارات؟",
+    "category": "priority",
+    "difficulty": "easy",
+    "question": "من يملك الأولوية إذا لا توجد إشارات أو أضواء؟",
     "answers": [
-      { "text": "السيارة الأسرع", "correct": false },
       { "text": "السيارة القادمة من اليمين", "correct": true },
-      { "text": "السيارة الأكبر", "correct": false }
+      { "text": "السيارة الأسرع", "correct": false },
+      { "text": "السيارة الموجودة على الطريق الأكبر دائمًا", "correct": false }
     ],
-    "explanation": "في غياب الإشارات تطبق قاعدة Rechts vor Links، يعني الأولوية للقادم من اليمين."
+    "explanation": "في غياب الإشارات أو الأضواء أو الشرطة تطبق قاعدة Rechts vor Links، أي الأولوية للقادم من اليمين."
   },
   {
-    "question": "ماذا يجب أن تفعلي عند إشارة STOP؟",
-    "answers": [
-      { "text": "تخفيف السرعة فقط", "correct": false },
-      { "text": "التوقف الكامل", "correct": true },
-      { "text": "المرور إذا كان الطريق فارغًا", "correct": false }
-    ],
-    "explanation": "STOP يعني توقف كامل دائمًا، حتى لو بدا الطريق فارغًا."
-  },
-  {
-    "question": "ماذا تعني Vorfahrt gewähren؟",
+    "category": "priority",
+    "difficulty": "easy",
+    "question": "ماذا تعني إشارة Vorfahrt gewähren؟",
     "answers": [
       { "text": "يجب إعطاء الأولوية", "correct": true },
       { "text": "يجب التوقف دائمًا", "correct": false },
       { "text": "الطريق مغلق", "correct": false }
     ],
-    "explanation": "Vorfahrt gewähren تعني إعطاء الأولوية، وليس التوقف دائمًا إذا كان الطريق فارغًا."
+    "explanation": "Vorfahrt gewähren تعني إعطاء الأولوية. التوقف الكامل ليس ضروريًا إذا كان الطريق فارغًا وآمنًا."
   },
   {
-    "question": "ما هو Reaktionsweg عند سرعة 50 km/h؟",
+    "category": "priority",
+    "difficulty": "easy",
+    "question": "ماذا يجب أن تفعلي عند إشارة STOP؟",
     "answers": [
-      { "text": "5 متر", "correct": false },
-      { "text": "15 متر", "correct": true },
-      { "text": "25 متر", "correct": false }
+      { "text": "التوقف الكامل", "correct": true },
+      { "text": "تخفيف السرعة فقط", "correct": false },
+      { "text": "المرور إذا كان الطريق فارغًا", "correct": false }
     ],
-    "explanation": "الحساب: 50 ÷ 10 × 3 = 15 متر."
+    "explanation": "STOP يعني توقف كامل دائمًا، حتى لو بدا الطريق فارغًا."
   },
   {
-    "question": "ما هو Bremsweg العادي عند سرعة 50 km/h؟",
+    "category": "priority",
+    "difficulty": "medium",
+    "question": "هل الطريق العريض يعني دائمًا أن لكِ الأولوية؟",
+    "answers": [
+      { "text": "لا", "correct": true },
+      { "text": "نعم دائمًا", "correct": false },
+      { "text": "نعم إذا كنتِ أسرع", "correct": false }
+    ],
+    "explanation": "حجم الطريق لا يعطي أولوية تلقائية. يجب الانتباه للإشارات أو تطبيق Rechts vor Links."
+  },
+  {
+    "category": "priority",
+    "difficulty": "medium",
+    "question": "عند تقاطع بدون إشارات، سيارة قادمة من يمينك. ماذا تفعلين؟",
+    "answers": [
+      { "text": "أنتظر لأنها تملك الأولوية", "correct": true },
+      { "text": "أمر لأن طريقي مستقيم", "correct": false },
+      { "text": "أسرع قبل أن تصل", "correct": false }
+    ],
+    "explanation": "السيارة القادمة من اليمين لها الأولوية حسب Rechts vor Links."
+  },
+  {
+    "category": "priority",
+    "difficulty": "medium",
+    "question": "متى يجب الانتباه بشكل خاص عند الطريق ذي الأولوية Vorfahrtsstraße؟",
+    "answers": [
+      { "text": "دائمًا، لأن الأولوية لا تمنع أخطاء الآخرين", "correct": true },
+      { "text": "لا داعي للانتباه لأن الأولوية لكِ", "correct": false },
+      { "text": "فقط في الليل", "correct": false }
+    ],
+    "explanation": "حتى لو كانت لكِ الأولوية، يجب القيادة بحذر وتوقع أخطاء الآخرين."
+  },
+  {
+    "category": "priority",
+    "difficulty": "hard",
+    "question": "ماذا يعني Ende der Vorfahrtsstraße؟",
+    "answers": [
+      { "text": "نهاية الطريق ذي الأولوية", "correct": true },
+      { "text": "بداية طريق سريع", "correct": false },
+      { "text": "ممنوع الوقوف", "correct": false }
+    ],
+    "explanation": "هذه الإشارة تعني أن أولوية الطريق انتهت، وقد تطبق بعدها قواعد أخرى مثل Rechts vor Links."
+  },
+  {
+    "category": "priority",
+    "difficulty": "hard",
+    "question": "في الدوار مع إشارة Vorfahrt gewähren، من يملك الأولوية؟",
+    "answers": [
+      { "text": "المركبات الموجودة داخل الدوار", "correct": true },
+      { "text": "المركبات التي تدخل الدوار", "correct": false },
+      { "text": "السيارة الأكبر دائمًا", "correct": false }
+    ],
+    "explanation": "عند وجود إشارة Vorfahrt gewähren قبل الدوار، يجب إعطاء الأولوية للمركبات الموجودة داخل الدوار."
+  },
+
+  {
+    "category": "signs",
+    "difficulty": "easy",
+    "question": "ماذا تعني إشارة Gefahrenzeichen بشكل عام؟",
+    "answers": [
+      { "text": "تحذير من خطر قادم", "correct": true },
+      { "text": "موقف سيارات", "correct": false },
+      { "text": "نهاية الطريق", "correct": false }
+    ],
+    "explanation": "إشارات الخطر تحذر من خطر قادم وتتطلب تخفيف السرعة وزيادة الانتباه."
+  },
+  {
+    "category": "signs",
+    "difficulty": "easy",
+    "question": "ماذا تعني إشارة Kinder؟",
+    "answers": [
+      { "text": "وجود أطفال قرب الطريق", "correct": true },
+      { "text": "ممنوع مرور الأطفال", "correct": false },
+      { "text": "طريق مخصص للمدارس فقط", "correct": false }
+    ],
+    "explanation": "إشارة Kinder تحذر من أطفال قد يتحركون بشكل غير متوقع، خصوصًا قرب المدارس أو الملاعب."
+  },
+  {
+    "category": "signs",
+    "difficulty": "easy",
+    "question": "ماذا تعني إشارة Baustelle؟",
+    "answers": [
+      { "text": "أعمال طرق", "correct": true },
+      { "text": "ممنوع التجاوز فقط", "correct": false },
+      { "text": "نهاية الطريق", "correct": false }
+    ],
+    "explanation": "Baustelle تعني وجود أعمال طرق، عمال، آلات أو تغييرات مؤقتة في المسار."
+  },
+  {
+    "category": "signs",
+    "difficulty": "medium",
+    "question": "عند رؤية إشارة Schleudergefahr، ماذا يجب أن تفعلي؟",
+    "answers": [
+      { "text": "تخفيف السرعة وتجنب الحركات المفاجئة", "correct": true },
+      { "text": "الفرملة بقوة", "correct": false },
+      { "text": "زيادة السرعة", "correct": false }
+    ],
+    "explanation": "Schleudergefahr تعني خطر الانزلاق. يجب القيادة بهدوء وتخفيف السرعة."
+  },
+  {
+    "category": "signs",
+    "difficulty": "medium",
+    "question": "ماذا تعني إشارة Verbot der Einfahrt؟",
+    "answers": [
+      { "text": "ممنوع الدخول من هذا الاتجاه", "correct": true },
+      { "text": "ممنوع الوقوف", "correct": false },
+      { "text": "طريق ذو أولوية", "correct": false }
+    ],
+    "explanation": "Verbot der Einfahrt تعني ممنوع الدخول من هذا الاتجاه."
+  },
+  {
+    "category": "signs",
+    "difficulty": "medium",
+    "question": "ماذا تعني إشارة Autobahn؟",
+    "answers": [
+      { "text": "بداية طريق سريع", "correct": true },
+      { "text": "ممر مشاة", "correct": false },
+      { "text": "منطقة سكنية", "correct": false }
+    ],
+    "explanation": "إشارة Autobahn تعني بداية طريق سريع له قواعد خاصة مثل السرعات العالية والتجاوز من اليسار."
+  },
+  {
+    "category": "signs",
+    "difficulty": "medium",
+    "question": "ماذا تعني إشارة Fußgängerüberweg؟",
+    "answers": [
+      { "text": "ممر مشاة", "correct": true },
+      { "text": "ممنوع عبور المشاة", "correct": false },
+      { "text": "موقف سيارات", "correct": false }
+    ],
+    "explanation": "Fußgängerüberweg يعني ممر مشاة. يجب الاستعداد للتوقف إذا أراد شخص العبور."
+  },
+  {
+    "category": "signs",
+    "difficulty": "hard",
+    "question": "ماذا تعني إشارة Einbahnstraße؟",
+    "answers": [
+      { "text": "طريق باتجاه واحد", "correct": true },
+      { "text": "طريق مغلق", "correct": false },
+      { "text": "طريق ذو أولوية دائمًا", "correct": false }
+    ],
+    "explanation": "Einbahnstraße تعني أن الطريق يسمح بالسير في اتجاه واحد فقط."
+  },
+  {
+    "category": "signs",
+    "difficulty": "hard",
+    "question": "في Baustelle، أي خطوط يجب اتباعها إذا وجدت خطوط صفراء مؤقتة؟",
+    "answers": [
+      { "text": "الخطوط الصفراء المؤقتة", "correct": true },
+      { "text": "الخطوط البيضاء القديمة دائمًا", "correct": false },
+      { "text": "أي خط أوضح", "correct": false }
+    ],
+    "explanation": "في مناطق الأعمال، الخطوط المؤقتة مثل الخطوط الصفراء تكون هي المهمة."
+  },
+  {
+    "category": "signs",
+    "difficulty": "hard",
+    "question": "هل يكفي حفظ شكل الإشارة للنجاح في الامتحان؟",
+    "answers": [
+      { "text": "لا، يجب معرفة التصرف الصحيح أيضًا", "correct": true },
+      { "text": "نعم، الشكل يكفي", "correct": false },
+      { "text": "فقط في أسئلة الصور", "correct": false }
+    ],
+    "explanation": "الامتحان يسأل غالبًا عن التصرف الصحيح، وليس فقط معنى الإشارة."
+  },
+
+  {
+    "category": "speed",
+    "difficulty": "easy",
+    "question": "ما هي صيغة Reaktionsweg؟",
+    "answers": [
+      { "text": "السرعة ÷ 10 × 3", "correct": true },
+      { "text": "السرعة ÷ 2", "correct": false },
+      { "text": "السرعة × 2", "correct": false }
+    ],
+    "explanation": "Reaktionsweg = السرعة ÷ 10 × 3."
+  },
+  {
+    "category": "speed",
+    "difficulty": "easy",
+    "question": "ما هي صيغة Bremsweg العادي؟",
+    "answers": [
+      { "text": "(السرعة ÷ 10)²", "correct": true },
+      { "text": "السرعة ÷ 10 × 3", "correct": false },
+      { "text": "السرعة ÷ 2", "correct": false }
+    ],
+    "explanation": "Bremsweg العادي = (السرعة ÷ 10)²."
+  },
+  {
+    "category": "speed",
+    "difficulty": "easy",
+    "question": "ما هو Anhalteweg؟",
+    "answers": [
+      { "text": "Reaktionsweg + Bremsweg", "correct": true },
+      { "text": "Bremsweg فقط", "correct": false },
+      { "text": "Reaktionsweg فقط", "correct": false }
+    ],
+    "explanation": "Anhalteweg هو مسافة رد الفعل زائد مسافة الفرملة."
+  },
+  {
+    "category": "speed",
+    "difficulty": "medium",
+    "question": "كم Reaktionsweg عند سرعة 50 km/h؟",
+    "answers": [
+      { "text": "15 متر", "correct": true },
+      { "text": "25 متر", "correct": false },
+      { "text": "50 متر", "correct": false }
+    ],
+    "explanation": "50 ÷ 10 × 3 = 15 متر."
+  },
+  {
+    "category": "speed",
+    "difficulty": "medium",
+    "question": "كم Bremsweg العادي عند سرعة 50 km/h؟",
     "answers": [
       { "text": "25 متر", "correct": true },
       { "text": "15 متر", "correct": false },
-      { "text": "50 متر", "correct": false }
+      { "text": "10 متر", "correct": false }
     ],
-    "explanation": "Bremsweg = (السرعة ÷ 10)²، إذن 5² = 25 متر."
+    "explanation": "(50 ÷ 10)² = 5² = 25 متر."
   },
   {
-    "question": "ما هو Anhalteweg؟",
+    "category": "speed",
+    "difficulty": "medium",
+    "question": "كم Anhalteweg عند 50 km/h في الحالة العادية؟",
     "answers": [
-      { "text": "مسافة الفرملة فقط", "correct": false },
-      { "text": "مسافة رد الفعل + مسافة الفرملة", "correct": true },
-      { "text": "مسافة الأمان فقط", "correct": false }
+      { "text": "40 متر", "correct": true },
+      { "text": "25 متر", "correct": false },
+      { "text": "15 متر", "correct": false }
     ],
-    "explanation": "Anhalteweg = Reaktionsweg + Bremsweg."
+    "explanation": "Reaktionsweg = 15 متر و Bremsweg = 25 متر، إذن Anhalteweg = 40 متر."
   },
   {
-    "question": "متى يجب إنشاء Rettungsgasse؟",
+    "category": "speed",
+    "difficulty": "hard",
+    "question": "ماذا يحدث لمسافة الفرملة إذا تضاعفت السرعة؟",
     "answers": [
-      { "text": "عند سماع الإسعاف فقط", "correct": false },
-      { "text": "فور بداية الازدحام", "correct": true },
-      { "text": "بعد توقف السيارات تمامًا", "correct": false }
+      { "text": "تزداد بشكل كبير، غالبًا أربعة أضعاف", "correct": true },
+      { "text": "تبقى نفسها", "correct": false },
+      { "text": "تقل", "correct": false }
     ],
-    "explanation": "يجب إنشاء Rettungsgasse فور بداية الازدحام، وليس عند وصول الإسعاف فقط."
+    "explanation": "مسافة الفرملة تزيد بشكل غير خطي. عند مضاعفة السرعة تزيد كثيرًا."
   },
   {
-    "question": "كيف يتم التجاوز على الأوتوبان؟",
+    "category": "speed",
+    "difficulty": "hard",
+    "question": "هل الحد الأقصى للسرعة يعني أن هذه السرعة آمنة دائمًا؟",
     "answers": [
-      { "text": "من اليمين", "correct": false },
-      { "text": "من اليسار", "correct": true },
-      { "text": "من أي جهة إذا كانت السرعة عالية", "correct": false }
+      { "text": "لا، يجب مراعاة الطقس والرؤية والطريق", "correct": true },
+      { "text": "نعم دائمًا", "correct": false },
+      { "text": "نعم فقط خارج المدن", "correct": false }
     ],
-    "explanation": "في ألمانيا التجاوز يكون من اليسار، خصوصًا على الأوتوبان."
+    "explanation": "السرعة القانونية ليست دائمًا السرعة الآمنة. الظروف قد تتطلب سرعة أقل."
   },
+
   {
+    "category": "autobahn",
+    "difficulty": "easy",
     "question": "من يملك الأولوية عند الدخول إلى الأوتوبان؟",
     "answers": [
-      { "text": "السيارة التي تدخل", "correct": false },
       { "text": "السيارات الموجودة على الأوتوبان", "correct": true },
+      { "text": "السيارة التي تدخل", "correct": false },
       { "text": "الأبطأ دائمًا", "correct": false }
     ],
     "explanation": "السيارات الموجودة على الأوتوبان لها الأولوية. يجب الاندماج بحذر."
   },
   {
-    "question": "ماذا تفعلين عند Aquaplaning؟",
+    "category": "autobahn",
+    "difficulty": "easy",
+    "question": "من أي جهة يتم التجاوز على الأوتوبان؟",
     "answers": [
-      { "text": "فرملة قوية", "correct": false },
-      { "text": "رفع القدم عن البنزين وتثبيت المقود", "correct": true },
-      { "text": "تغيير الاتجاه بسرعة", "correct": false }
+      { "text": "من اليسار", "correct": true },
+      { "text": "من اليمين", "correct": false },
+      { "text": "من أي جهة", "correct": false }
     ],
-    "explanation": "عند Aquaplaning يجب تجنب الحركات المفاجئة ورفع القدم عن البنزين بهدوء."
+    "explanation": "في ألمانيا التجاوز يكون من اليسار."
   },
   {
+    "category": "autobahn",
+    "difficulty": "medium",
+    "question": "متى يجب إنشاء Rettungsgasse؟",
+    "answers": [
+      { "text": "فور بداية الازدحام", "correct": true },
+      { "text": "عند سماع الإسعاف فقط", "correct": false },
+      { "text": "بعد وصول الشرطة", "correct": false }
+    ],
+    "explanation": "Rettungsgasse يجب إنشاؤها فور بداية الازدحام حتى تمر مركبات الطوارئ."
+  },
+  {
+    "category": "autobahn",
+    "difficulty": "medium",
+    "question": "أين يجب تخفيف السرعة عند الخروج من الأوتوبان؟",
+    "answers": [
+      { "text": "في مسار الخروج", "correct": true },
+      { "text": "في المسار السريع قبل الخروج بوقت طويل", "correct": false },
+      { "text": "بعد التوقف تمامًا", "correct": false }
+    ],
+    "explanation": "يجب الانتقال إلى مسار الخروج ثم تخفيف السرعة هناك، وليس الفرملة بقوة على المسار الرئيسي."
+  },
+  {
+    "category": "autobahn",
+    "difficulty": "hard",
+    "question": "هل عدم وجود حد سرعة على الأوتوبان يعني القيادة بأي سرعة؟",
+    "answers": [
+      { "text": "لا، يجب أن تكون السرعة مناسبة للظروف", "correct": true },
+      { "text": "نعم دائمًا", "correct": false },
+      { "text": "نعم إذا كانت السيارة قوية", "correct": false }
+    ],
+    "explanation": "حتى عند عدم وجود حد سرعة ثابت، يجب مراعاة الطقس والرؤية وحالة المرور."
+  },
+  {
+    "category": "autobahn",
+    "difficulty": "hard",
+    "question": "ماذا تفعلين إذا تعطلت السيارة على الأوتوبان؟",
+    "answers": [
+      { "text": "تشغيل أضواء الطوارئ والابتعاد عن الطريق", "correct": true },
+      { "text": "البقاء داخل السيارة دائمًا", "correct": false },
+      { "text": "الوقوف في المسار الأيمن", "correct": false }
+    ],
+    "explanation": "عند العطل يجب تشغيل أضواء الطوارئ، ارتداء السترة العاكسة، وضع مثلث التحذير والابتعاد عن الطريق."
+  },
+
+  {
+    "category": "weather",
+    "difficulty": "easy",
+    "question": "لماذا تكون أول دقائق المطر خطيرة؟",
+    "answers": [
+      { "text": "لأن الماء يختلط بالزيوت والغبار", "correct": true },
+      { "text": "لأن الطريق يصبح أوسع", "correct": false },
+      { "text": "لأن الإشارات تختفي دائمًا", "correct": false }
+    ],
+    "explanation": "أول المطر يخلط الماء بالزيوت والغبار، مما يجعل الطريق زلقًا."
+  },
+  {
+    "category": "weather",
+    "difficulty": "easy",
+    "question": "ماذا تفعلين في الضباب الكثيف؟",
+    "answers": [
+      { "text": "تخفيف السرعة وزيادة المسافة", "correct": true },
+      { "text": "زيادة السرعة للخروج بسرعة", "correct": false },
+      { "text": "استخدام الهاتف للملاحة فقط", "correct": false }
+    ],
+    "explanation": "في الضباب تقل الرؤية، لذلك يجب تخفيف السرعة وزيادة Abstand."
+  },
+  {
+    "category": "weather",
+    "difficulty": "medium",
     "question": "متى تستخدمين Nebelschlussleuchte؟",
     "answers": [
       { "text": "عندما تكون الرؤية أقل من 50 مترًا", "correct": true },
       { "text": "دائمًا في الليل", "correct": false },
       { "text": "عند المطر الخفيف فقط", "correct": false }
     ],
-    "explanation": "Nebelschlussleuchte تستخدم فقط عندما تكون الرؤية أقل من 50 مترًا."
+    "explanation": "ضوء الضباب الخلفي يستخدم فقط عندما تكون الرؤية أقل من 50 مترًا."
   },
   {
-    "question": "ما الخطر عند رؤية أطفال قرب الطريق؟",
+    "category": "weather",
+    "difficulty": "medium",
+    "question": "ماذا تفعلين عند Aquaplaning؟",
     "answers": [
-      { "text": "الأطفال قد يتحركون بشكل غير متوقع", "correct": true },
-      { "text": "السيارات ممنوعة دائمًا", "correct": false },
-      { "text": "يجب استخدام الضوء العالي", "correct": false }
+      { "text": "رفع القدم عن البنزين وتثبيت المقود", "correct": true },
+      { "text": "فرملة قوية", "correct": false },
+      { "text": "تغيير الاتجاه بسرعة", "correct": false }
     ],
-    "explanation": "الأطفال قد يركضون فجأة إلى الطريق، خصوصًا قرب المدارس أو الملاعب."
+    "explanation": "عند Aquaplaning يجب تجنب الفرملة القوية والحركات المفاجئة."
   },
   {
-    "question": "إذا ظهرت كرة على الطريق، ماذا تتوقعين؟",
-    "answers": [
-      { "text": "طفل قد يركض خلفها", "correct": true },
-      { "text": "الطريق مغلق", "correct": false },
-      { "text": "لا يوجد خطر", "correct": false }
-    ],
-    "explanation": "كرة على الطريق قد تعني أن طفلًا سيلحق بها فجأة."
-  },
-  {
-    "question": "ما أكبر خطر عند الانعطاف يمينًا داخل المدينة؟",
-    "answers": [
-      { "text": "الدراجات في الزاوية العمياء", "correct": true },
-      { "text": "السيارات خلفك فقط", "correct": false },
-      { "text": "لوحة السرعة فقط", "correct": false }
-    ],
-    "explanation": "عند الانعطاف يجب فحص المرآة والكتف والانتباه للدراجات والمشاة."
-  },
-  {
-    "question": "أين يكون خطر Glatteis أكبر غالبًا؟",
+    "category": "weather",
+    "difficulty": "hard",
+    "question": "أين يظهر Glatteis غالبًا أولًا؟",
     "answers": [
       { "text": "على الجسور والمناطق المظللة", "correct": true },
-      { "text": "داخل مواقف السيارات فقط", "correct": false },
+      { "text": "في الأنفاق الدافئة فقط", "correct": false },
       { "text": "في الصيف فقط", "correct": false }
     ],
     "explanation": "الجسور والمناطق المظللة تبرد أسرع، لذلك يظهر الجليد هناك غالبًا أولًا."
   },
   {
-    "question": "ماذا تفعلين عند الطريق الزلق؟",
+    "category": "weather",
+    "difficulty": "hard",
+    "question": "ما التصرف الصحيح على طريق ثلجي أو جليدي؟",
     "answers": [
-      { "text": "تخفيف السرعة وزيادة المسافة", "correct": true },
-      { "text": "الفرملة بقوة", "correct": false },
-      { "text": "زيادة السرعة للخروج بسرعة", "correct": false }
+      { "text": "حركات ناعمة وسرعة منخفضة ومسافة أكبر", "correct": true },
+      { "text": "فرملة مفاجئة", "correct": false },
+      { "text": "تسارع قوي لتجاوز الخطر", "correct": false }
     ],
-    "explanation": "في الطريق الزلق يجب تخفيف السرعة، القيادة بهدوء، وزيادة Abstand."
+    "explanation": "على الثلج والجليد يجب القيادة بسلاسة، تخفيف السرعة وزيادة المسافة."
+  },
+
+  {
+    "category": "pedestrians",
+    "difficulty": "easy",
+    "question": "ما الخطر عند رؤية أطفال قرب الطريق؟",
+    "answers": [
+      { "text": "الأطفال قد يتحركون بشكل غير متوقع", "correct": true },
+      { "text": "لا يوجد خطر خاص", "correct": false },
+      { "text": "يجب استخدام الضوء العالي", "correct": false }
+    ],
+    "explanation": "الأطفال قد يركضون فجأة إلى الطريق، خصوصًا قرب المدارس أو الملاعب."
   },
   {
-    "question": "هل السرعة المسموحة دائمًا آمنة؟",
+    "category": "pedestrians",
+    "difficulty": "easy",
+    "question": "إذا ظهرت كرة على الطريق، ماذا تتوقعين؟",
     "answers": [
-      { "text": "نعم دائمًا", "correct": false },
-      { "text": "لا، يجب مراعاة الطقس والرؤية والطريق", "correct": true },
-      { "text": "نعم إذا كنتِ على الأوتوبان", "correct": false }
+      { "text": "طفل قد يركض خلفها", "correct": true },
+      { "text": "لا يوجد خطر", "correct": false },
+      { "text": "يجب التجاوز مباشرة", "correct": false }
     ],
-    "explanation": "الحد الأقصى ليس دائمًا السرعة الآمنة. الظروف قد تتطلب سرعة أقل."
+    "explanation": "كرة على الطريق قد تعني أن طفلًا سيلحق بها فجأة."
   },
   {
+    "category": "pedestrians",
+    "difficulty": "medium",
+    "question": "عند الانعطاف يمينًا، لماذا يجب فحص الزاوية العمياء؟",
+    "answers": [
+      { "text": "لأن دراجة قد تكون بجانب السيارة", "correct": true },
+      { "text": "لرؤية لوحة السرعة فقط", "correct": false },
+      { "text": "لأن الطريق يصبح أوسع", "correct": false }
+    ],
+    "explanation": "الدراجات قد تكون في الزاوية العمياء، لذلك يجب فحص المرآة والكتف."
+  },
+  {
+    "category": "pedestrians",
+    "difficulty": "medium",
+    "question": "متى يجب الاستعداد للتوقف عند Fußgängerüberweg؟",
+    "answers": [
+      { "text": "إذا كان شخص يريد العبور", "correct": true },
+      { "text": "فقط إذا كان هناك شرطي", "correct": false },
+      { "text": "فقط في الليل", "correct": false }
+    ],
+    "explanation": "عند ممر المشاة يجب الاستعداد للتوقف إذا أراد شخص العبور."
+  },
+  {
+    "category": "pedestrians",
+    "difficulty": "hard",
+    "question": "هل يجوز تجاوز سيارة توقفت عند ممر مشاة؟",
+    "answers": [
+      { "text": "لا", "correct": true },
+      { "text": "نعم إذا كان الطريق فارغًا", "correct": false },
+      { "text": "نعم بسرعة منخفضة", "correct": false }
+    ],
+    "explanation": "لا يجب تجاوز سيارة توقفت عند ممر مشاة، لأن مشاة قد يعبرون أمامها."
+  },
+
+  {
+    "category": "parking",
+    "difficulty": "easy",
     "question": "ماذا يعني Absolutes Halteverbot؟",
     "answers": [
       { "text": "ممنوع التوقف تمامًا", "correct": true },
       { "text": "ممنوع الركن فقط", "correct": false },
       { "text": "مسموح التوقف لدقيقة", "correct": false }
     ],
-    "explanation": "Absolutes Halteverbot يعني ممنوع التوقف، حتى لفترة قصيرة."
+    "explanation": "Absolutes Halteverbot يعني ممنوع التوقف حتى لفترة قصيرة."
   },
   {
+    "category": "parking",
+    "difficulty": "easy",
     "question": "ماذا يعني Eingeschränktes Halteverbot؟",
     "answers": [
-      { "text": "ممنوع التوقف تمامًا", "correct": false },
       { "text": "ممنوع الركن، لكن التوقف القصير ممكن", "correct": true },
-      { "text": "طريق مغلق", "correct": false }
+      { "text": "ممنوع التوقف تمامًا", "correct": false },
+      { "text": "طريق سريع", "correct": false }
     ],
-    "explanation": "Eingeschränktes Halteverbot يمنع الركن، لكنه قد يسمح بتوقف قصير."
+    "explanation": "Eingeschränktes Halteverbot يمنع الركن الطويل، لكنه قد يسمح بالتوقف القصير."
   },
   {
+    "category": "parking",
+    "difficulty": "medium",
     "question": "متى يعتبر التوقف Parken غالبًا؟",
     "answers": [
       { "text": "إذا تجاوز 3 دقائق أو غادرتِ السيارة", "correct": true },
       { "text": "بعد 10 ثوانٍ دائمًا", "correct": false },
-      { "text": "فقط في الليل", "correct": false }
+      { "text": "فقط خارج المدن", "correct": false }
     ],
     "explanation": "Parken يعني غالبًا التوقف أكثر من 3 دقائق أو مغادرة السيارة."
   },
   {
+    "category": "parking",
+    "difficulty": "medium",
+    "question": "هل يسمح بالوقوف على الرصيف دائمًا إذا كان هناك مكان؟",
+    "answers": [
+      { "text": "لا، فقط إذا وُجدت إشارة تسمح بذلك", "correct": true },
+      { "text": "نعم دائمًا", "correct": false },
+      { "text": "نعم إذا كانت السيارة صغيرة", "correct": false }
+    ],
+    "explanation": "الوقوف على الرصيف ممنوع عادة إلا إذا وُجدت إشارة رسمية تسمح بذلك."
+  },
+  {
+    "category": "parking",
+    "difficulty": "hard",
+    "question": "لماذا يمنع الوقوف قرب التقاطعات؟",
+    "answers": [
+      { "text": "لأنه يحجب الرؤية ويعيق المرور", "correct": true },
+      { "text": "لأن الطريق يصبح أسرع", "correct": false },
+      { "text": "لأن الإشارات لا تعمل", "correct": false }
+    ],
+    "explanation": "الوقوف قرب التقاطعات قد يحجب الرؤية عن السيارات والمشاة والدراجات."
+  },
+
+  {
+    "category": "safety",
+    "difficulty": "easy",
     "question": "ماذا تفعلين عند تعب شديد أثناء القيادة؟",
     "answers": [
-      { "text": "تكملين لأن المنزل قريب", "correct": false },
       { "text": "تتوقفين وتأخذين راحة", "correct": true },
+      { "text": "تكملين لأن المنزل قريب", "correct": false },
       { "text": "تفتحين النافذة فقط", "correct": false }
     ],
     "explanation": "التعب يبطئ رد الفعل ويزيد خطر الحوادث. الحل الحقيقي هو الراحة."
   },
   {
-    "question": "ما نسبة الكحول المسموحة للسائقين الجدد؟",
+    "category": "safety",
+    "difficulty": "easy",
+    "question": "ما نسبة الكحول المسموحة للسائقين الجدد في Probezeit؟",
     "answers": [
       { "text": "0.0‰", "correct": true },
       { "text": "0.5‰", "correct": false },
       { "text": "1.0‰", "correct": false }
     ],
     "explanation": "للسائقين الجدد في فترة Probezeit القاعدة هي 0.0‰."
+  },
+  {
+    "category": "safety",
+    "difficulty": "medium",
+    "question": "لماذا الهاتف خطير أثناء القيادة؟",
+    "answers": [
+      { "text": "لأنه يقلل التركيز ويؤخر رد الفعل", "correct": true },
+      { "text": "لأنه يزيد سرعة السيارة", "correct": false },
+      { "text": "لأنه يغير اتجاه الطريق", "correct": false }
+    ],
+    "explanation": "استخدام الهاتف يشتت الانتباه ويزيد Reaktionsweg."
+  },
+  {
+    "category": "safety",
+    "difficulty": "medium",
+    "question": "ماذا يجب أن تفعلي عند تعطل السيارة؟",
+    "answers": [
+      { "text": "تشغيل أضواء الطوارئ وتأمين المكان", "correct": true },
+      { "text": "ترك السيارة في وسط الطريق", "correct": false },
+      { "text": "إطفاء كل الأضواء", "correct": false }
+    ],
+    "explanation": "عند العطل يجب تشغيل أضواء الطوارئ وتأمين المكان بمثلث التحذير إذا لزم الأمر."
+  },
+  {
+    "category": "safety",
+    "difficulty": "hard",
+    "question": "لماذا يجب زيادة Abstand عند المطر أو التعب؟",
+    "answers": [
+      { "text": "لأن مسافة التوقف ورد الفعل تصبح أطول", "correct": true },
+      { "text": "لأن السيارة تصبح أسرع", "correct": false },
+      { "text": "لأن الطريق يصبح أقصر", "correct": false }
+    ],
+    "explanation": "المطر يزيد Bremsweg والتعب يزيد Reaktionsweg، لذلك يجب زيادة المسافة."
   }
 ]
