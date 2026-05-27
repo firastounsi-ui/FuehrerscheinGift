@@ -771,3 +771,225 @@ footer {
     font-weight: 900;
     text-align: right;
 }
+/* =========================
+   Mobile polish
+   ========================= */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 18px 14px 40px;
+    }
+
+    .nav {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .nav-links a {
+        background: rgba(255, 255, 255, 0.75);
+        padding: 8px 12px;
+        border-radius: 999px;
+    }
+
+    .hero-content {
+        margin-top: 35px;
+        padding: 26px 20px;
+        border-radius: 26px;
+    }
+
+    .badge {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    button {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        padding: 24px 14px;
+    }
+
+    .love-note,
+    .section {
+        padding: 22px 18px;
+        border-radius: 22px;
+        margin-bottom: 24px;
+    }
+
+    .section-title h2,
+    .section h2 {
+        font-size: 27px;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .course-tab {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 12px;
+        align-items: center;
+        text-align: right;
+    }
+
+    .course-tab span {
+        grid-row: span 2;
+        font-size: 26px;
+    }
+
+    .course-tab strong {
+        margin-top: 0;
+    }
+
+    .lesson-view {
+        padding: 20px 16px;
+    }
+
+    .lesson-header {
+        align-items: flex-start;
+    }
+
+    .lesson-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+        flex-shrink: 0;
+    }
+
+    .lesson-header h3 {
+        font-size: 24px;
+    }
+
+    .chapter {
+        padding: 16px;
+    }
+
+    .chapter h4,
+    .trap-box h4 {
+        font-size: 19px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 20px 16px;
+    }
+
+    .real-sign {
+        width: 82px;
+        height: 82px;
+    }
+
+    #sign-search {
+        font-size: 15px;
+        padding: 13px 16px;
+    }
+
+    .filter-bar button {
+        width: auto;
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .quiz-card {
+        padding: 22px 16px;
+    }
+
+    .daily-quiz-info {
+        flex-direction: column;
+        border-radius: 18px;
+        text-align: center;
+    }
+
+    #quiz-question {
+        font-size: 21px;
+        line-height: 1.5;
+    }
+
+    .answers button {
+        font-size: 15px;
+        padding: 13px 16px;
+    }
+
+    .daily-status {
+        font-size: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 22px 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    h1 {
+        font-size: 29px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .section-title h2,
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .hero-content {
+        padding: 22px 16px;
+    }
+
+    .lesson-header {
+        gap: 12px;
+    }
+
+    .lesson-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .lesson-header h3 {
+        font-size: 22px;
+    }
+}
